@@ -6,7 +6,7 @@ function App() {
   return (
     <>
       <Layout>
-        <Navigation />
+        <Navigation logoSrc={'/vite.svg'} logoAlt={'logo'} />
       </Layout>
     </>
   );

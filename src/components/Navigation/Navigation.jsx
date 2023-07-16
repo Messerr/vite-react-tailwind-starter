@@ -1,4 +1,6 @@
-const Navigation = () => {
+import Button from '../Button/Button';
+
+const Navigation = (props) => {
   const navLinks = [
     {
       id: '1',
@@ -23,14 +25,16 @@ const Navigation = () => {
   ]
 
   return (
-    <div>
-      <ul className="">
+    <div className="py-4 flex justify-between items-center">
+      <img src={props.logoSrc} alt={props.logoAlt} />
+      <ul className="flex items-center">
         {navLinks.map((navLink) => (
-          <li key={navLink.id}>
+          <li key={navLink.id} className="mx-1">
             <a href={navLink.url}>{navLink.text}</a>
           </li>
         ))}
       </ul>
+      <Button text={'CTA Here'} />
     </div>
   );
 };
